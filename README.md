@@ -8,6 +8,12 @@ queues everytime you start it.
 
 This implementation is **not complete** yet, but should be useful already.
 
+Buld and Run:
+```
+docker build -t fake_sqs .
+docker run -d -p 4568:4568 --name node fake_sqs
+```
+
 Done so far are:
 
 * Creating queues
