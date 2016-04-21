@@ -39,7 +39,14 @@ module FakeSQS
       if (db = database[name])
         db
       else
-        fail NonExistentQueue, name
+        # fail NonExistentQueue, name
+        
+        # create(name, options)
+        # database[name]
+        
+        queue = queue_factory.new(options)
+        database[name] = queue
+        return queue
       end
     end
 
